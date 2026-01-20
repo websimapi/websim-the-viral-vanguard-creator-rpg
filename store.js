@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { v4 as uuidv4 } from 'uuid';
 
+const room = new WebsimSocket();
+
 // Game constants
 export const LEVELS = [
     0, 100, 250, 500, 1000, 2000, 4000, 8000, 16000, 32000
@@ -63,7 +65,6 @@ export const useGameStore = create((set, get) => ({
     // Actions
     init: async () => {
         // Load from Websim DB
-        const room = new WebsimSocket();
         const user = await window.websim.getCurrentUser();
         
         let savedData = null;
@@ -92,7 +93,6 @@ export const useGameStore = create((set, get) => ({
         const { level, xp, gold, quests, user } = get();
         if (!user) return;
         
-        const room = new WebsimSocket();
         const records = await room.collection('player_save').filter({ username: user.username }).getList();
         
         const data = { level, xp, gold, quests };
