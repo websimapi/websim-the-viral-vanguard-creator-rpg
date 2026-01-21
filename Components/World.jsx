@@ -137,7 +137,6 @@ const Station = ({ position, color, label, type }) => {
           color,
           anchorX: "center",
           anchorY: "middle",
-          font: "https://fonts.gstatic.com/s/rajdhani/v15/L1RYZPSJbMtsX0U5o95g.ttf",
           children: label
         },
         void 0,
@@ -156,14 +155,13 @@ const Station = ({ position, color, label, type }) => {
           color: "white",
           anchorX: "center",
           anchorY: "middle",
-          font: "https://fonts.gstatic.com/s/rajdhani/v15/L1RYZPSJbMtsX0U5o95g.ttf",
           children: "[PRESS E]"
         },
         void 0,
         false,
         {
           fileName: "<stdin>",
-          lineNumber: 139,
+          lineNumber: 138,
           columnNumber: 25
         }
       )
@@ -178,12 +176,12 @@ const Station = ({ position, color, label, type }) => {
     }),
     /* @__PURE__ */ jsxDEV(Sparkles, { count: 20, scale: 3, size: 4, speed: 0.4, opacity: 0.5, color }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 153,
+      lineNumber: 151,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("pointLight", { distance: 3, intensity: 5, color, position: [0, 1, 0] }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 156,
+      lineNumber: 154,
       columnNumber: 13
     })
   ] }, void 0, true, {
@@ -195,107 +193,145 @@ const Station = ({ position, color, label, type }) => {
 const GameScene = () => {
   const isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
   return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("color", { attach: "background", args: ["#050510"] }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 164,
+      columnNumber: 13
+    }),
+    /* @__PURE__ */ jsxDEV("fog", { attach: "fog", args: ["#050510", 5, 30] }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 165,
+      columnNumber: 13
+    }),
     /* @__PURE__ */ jsxDEV(PerspectiveCamera, { makeDefault: true, position: [0, 1.6, 5] }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 166,
+      lineNumber: 167,
       columnNumber: 13
     }),
     !isTouch && /* @__PURE__ */ jsxDEV(PointerLockControls, { selector: "#root" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 167,
+      lineNumber: 168,
       columnNumber: 26
     }),
     /* @__PURE__ */ jsxDEV(Player, {}, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 168,
+      lineNumber: 169,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV("ambientLight", { intensity: 0.2 }, void 0, false, {
-      fileName: "<stdin>",
-      lineNumber: 171,
-      columnNumber: 13
-    }),
-    /* @__PURE__ */ jsxDEV("pointLight", { position: [10, 10, 10], intensity: 1 }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("ambientLight", { intensity: 0.7 }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 172,
       columnNumber: 13
     }),
+    /* @__PURE__ */ jsxDEV("pointLight", { position: [10, 10, 10], intensity: 1.5 }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 173,
+      columnNumber: 13
+    }),
+    /* @__PURE__ */ jsxDEV("pointLight", { position: [-10, 5, -10], intensity: 0.5, color: "#4d4dff" }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 174,
+      columnNumber: 13
+    }),
     /* @__PURE__ */ jsxDEV(Environment, { preset: "city" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 175,
+      lineNumber: 177,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { rotation: [-Math.PI / 2, 0, 0], position: [0, 0, 0], children: [
       /* @__PURE__ */ jsxDEV("planeGeometry", { args: [50, 50] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 179,
+        lineNumber: 181,
         columnNumber: 17
       }),
-      /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#050510", roughness: 0.4, metalness: 0.8 }, void 0, false, {
+      /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#0a0a20", roughness: 0.2, metalness: 0.5 }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 180,
+        lineNumber: 182,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 178,
+      lineNumber: 180,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("gridHelper", { args: [50, 50, 5066239, 1118481] }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 184,
+      lineNumber: 186,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [-5, 0, -2], rotation: [0, Math.PI / 4, 0], color: "#ff00ff", label: "IDEA ALTAR", type: "whiteboard" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 189,
+      lineNumber: 191,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [0, 0, -5], color: "#00d4ff", label: "RENDER CORE", type: "computer" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 192,
+      lineNumber: 194,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [5, 0, -2], color: "#00ff00", label: "THE VOID", type: "greenscreen" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 195,
+      lineNumber: 197,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { position: [-10, 5, -10], children: [
       /* @__PURE__ */ jsxDEV("boxGeometry", { args: [2, 10, 2] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 199,
+        lineNumber: 201,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#111" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 200,
+        lineNumber: 202,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 198,
+      lineNumber: 200,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { position: [10, 5, -10], children: [
       /* @__PURE__ */ jsxDEV("boxGeometry", { args: [2, 10, 2] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 203,
+        lineNumber: 205,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#111" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 204,
+        lineNumber: 206,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 202,
+      lineNumber: 204,
       columnNumber: 13
+    }),
+    !isTouch && /* @__PURE__ */ jsxDEV(Float, { speed: 2, rotationIntensity: 0, floatIntensity: 0.5, children: /* @__PURE__ */ jsxDEV(
+      Text,
+      {
+        position: [0, 1.6, 3],
+        fontSize: 0.2,
+        color: "white",
+        anchorX: "center",
+        anchorY: "middle",
+        fillOpacity: 0.8,
+        children: "CLICK TO ENABLE CAMERA"
+      },
+      void 0,
+      false,
+      {
+        fileName: "<stdin>",
+        lineNumber: 211,
+        columnNumber: 21
+      }
+    ) }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 210,
+      columnNumber: 17
     })
   ] }, void 0, true, {
     fileName: "<stdin>",
-    lineNumber: 165,
+    lineNumber: 163,
     columnNumber: 9
   });
 };

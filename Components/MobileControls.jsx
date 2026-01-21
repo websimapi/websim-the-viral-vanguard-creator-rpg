@@ -4,9 +4,11 @@ import nipplejs from "nipplejs";
 window.joystick = { x: 0, y: 0 };
 const MobileControls = () => {
   const manager = useRef(null);
+  const [isTouch, setIsTouch] = React.useState(false);
   useEffect(() => {
-    const isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    if (!isTouch) return;
+    const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsTouch(touch);
+    if (!touch) return;
     const zone = document.getElementById("joystick-zone");
     if (!zone) return;
     manager.current = nipplejs.create({
@@ -31,6 +33,7 @@ const MobileControls = () => {
       if (manager.current) manager.current.destroy();
     };
   }, []);
+  if (!isTouch) return null;
   return /* @__PURE__ */ jsxDEV("div", { id: "joystick-zone", style: {
     position: "absolute",
     bottom: "20px",
@@ -42,7 +45,7 @@ const MobileControls = () => {
     pointerEvents: "auto"
   } }, void 0, false, {
     fileName: "<stdin>",
-    lineNumber: 44,
+    lineNumber: 48,
     columnNumber: 9
   });
 };
