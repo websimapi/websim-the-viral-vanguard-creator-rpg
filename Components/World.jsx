@@ -1,7 +1,7 @@
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
 import React, { useRef, useState, useEffect } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
-import { Text, Float, Sparkles, PerspectiveCamera, PointerLockControls, Environment, Billboard } from "@react-three/drei";
+import { Text, Float, Sparkles, PerspectiveCamera, PointerLockControls, Billboard } from "@react-three/drei";
 import * as THREE from "three";
 import { useGameStore } from "../store.js";
 function Player() {
@@ -218,92 +218,92 @@ const GameScene = () => {
       lineNumber: 169,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV("ambientLight", { intensity: 0.7 }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("hemisphereLight", { intensity: 0.5, groundColor: "#000000" }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 172,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV("pointLight", { position: [10, 10, 10], intensity: 1.5 }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("ambientLight", { intensity: 0.4 }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 173,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV("pointLight", { position: [-10, 5, -10], intensity: 0.5, color: "#4d4dff" }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("pointLight", { position: [10, 10, 10], intensity: 1.5 }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 174,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV(Environment, { preset: "city" }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("pointLight", { position: [-10, 5, -10], intensity: 0.5, color: "#4d4dff" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 177,
+      lineNumber: 175,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { rotation: [-Math.PI / 2, 0, 0], position: [0, 0, 0], children: [
       /* @__PURE__ */ jsxDEV("planeGeometry", { args: [50, 50] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 181,
+        lineNumber: 179,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#0a0a20", roughness: 0.2, metalness: 0.5 }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 182,
+        lineNumber: 180,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 180,
+      lineNumber: 178,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("gridHelper", { args: [50, 50, 5066239, 1118481] }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 186,
+      lineNumber: 184,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [-5, 0, -2], rotation: [0, Math.PI / 4, 0], color: "#ff00ff", label: "IDEA ALTAR", type: "whiteboard" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 191,
+      lineNumber: 189,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [0, 0, -5], color: "#00d4ff", label: "RENDER CORE", type: "computer" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 194,
+      lineNumber: 192,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(Station, { position: [5, 0, -2], color: "#00ff00", label: "THE VOID", type: "greenscreen" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 197,
+      lineNumber: 195,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { position: [-10, 5, -10], children: [
       /* @__PURE__ */ jsxDEV("boxGeometry", { args: [2, 10, 2] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 201,
+        lineNumber: 199,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#111" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 202,
+        lineNumber: 200,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 200,
+      lineNumber: 198,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("mesh", { position: [10, 5, -10], children: [
       /* @__PURE__ */ jsxDEV("boxGeometry", { args: [2, 10, 2] }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 205,
+        lineNumber: 203,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("meshStandardMaterial", { color: "#111" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 206,
+        lineNumber: 204,
         columnNumber: 17
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 204,
+      lineNumber: 202,
       columnNumber: 13
     }),
     !isTouch && /* @__PURE__ */ jsxDEV(Float, { speed: 2, rotationIntensity: 0, floatIntensity: 0.5, children: /* @__PURE__ */ jsxDEV(
@@ -321,12 +321,12 @@ const GameScene = () => {
       false,
       {
         fileName: "<stdin>",
-        lineNumber: 211,
+        lineNumber: 209,
         columnNumber: 21
       }
     ) }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 210,
+      lineNumber: 208,
       columnNumber: 17
     })
   ] }, void 0, true, {
