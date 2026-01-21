@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import { GameScene } from "./Components/World.jsx";
 import { HUD, QuestModal } from "./Components/HUD.jsx";
+import { MobileControls } from "./Components/MobileControls.jsx";
 import { useGameStore } from "./store.js";
 const App = () => {
   const { init, user } = useGameStore();
@@ -23,7 +24,7 @@ const App = () => {
   }, []);
   if (!user) return /* @__PURE__ */ jsxDEV("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "white" }, children: "CONNECTING TO NEURAL LINK..." }, void 0, false, {
     fileName: "<stdin>",
-    lineNumber: 31,
+    lineNumber: 32,
     columnNumber: 23
   });
   if (!started) {
@@ -43,36 +44,36 @@ const App = () => {
     }, children: [
       /* @__PURE__ */ jsxDEV("h1", { style: { fontFamily: '"Press Start 2P", cursive', color: "#4d4dff", textShadow: "0 0 20px #4d4dff", fontSize: "3rem", textAlign: "center", marginBottom: "10px" }, children: "THE VIRAL VANGUARD" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("h2", { style: { fontFamily: "Rajdhani", fontWeight: 300, letterSpacing: "5px" }, children: "CREATOR RPG SYSTEM" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 42,
+        lineNumber: 43,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV("div", { style: { maxWidth: "600px", textAlign: "center", margin: "40px", lineHeight: "1.6", color: "#aaa" }, children: [
         "Welcome, ",
         /* @__PURE__ */ jsxDEV("b", { children: user.username }, void 0, false, {
           fileName: "<stdin>",
-          lineNumber: 45,
+          lineNumber: 46,
           columnNumber: 30
         }),
         ". ",
         /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
           fileName: "<stdin>",
-          lineNumber: 45,
+          lineNumber: 46,
           columnNumber: 54
         }),
         /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
           fileName: "<stdin>",
-          lineNumber: 45,
+          lineNumber: 46,
           columnNumber: 59
         }),
         "Your work is no longer just work. It is a quest for dominance in the algorithm. Walk the halls of the Studio. Complete tasks to earn XP. Ascend the ranks."
       ] }, void 0, true, {
         fileName: "<stdin>",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 17
       }),
       /* @__PURE__ */ jsxDEV(
@@ -98,45 +99,50 @@ const App = () => {
         false,
         {
           fileName: "<stdin>",
-          lineNumber: 50,
+          lineNumber: 51,
           columnNumber: 17
         }
       )
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 13
     });
   }
   return /* @__PURE__ */ jsxDEV("div", { style: { width: "100vw", height: "100vh" }, children: [
     /* @__PURE__ */ jsxDEV(Canvas, { shadows: true, dpr: [1, 2], children: /* @__PURE__ */ jsxDEV(GameScene, {}, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 75,
+      lineNumber: 76,
       columnNumber: 17
     }) }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 74,
+      lineNumber: 75,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(HUD, {}, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 77,
+      lineNumber: 78,
+      columnNumber: 13
+    }),
+    /* @__PURE__ */ jsxDEV(MobileControls, {}, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 79,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(QuestModal, {}, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 78,
+      lineNumber: 80,
       columnNumber: 13
     })
   ] }, void 0, true, {
     fileName: "<stdin>",
-    lineNumber: 73,
+    lineNumber: 74,
     columnNumber: 9
   });
 };
 const root = createRoot(document.getElementById("root"));
 root.render(/* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
   fileName: "<stdin>",
-  lineNumber: 84,
+  lineNumber: 86,
   columnNumber: 13
 }));

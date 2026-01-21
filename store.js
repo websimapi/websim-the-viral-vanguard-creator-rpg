@@ -1,7 +1,18 @@
 import { create } from 'zustand';
 import { v4 as uuidv4 } from 'uuid';
 
-const room = new WebsimSocket();
+// Safely initialize WebsimSocket if available, otherwise mock it
+const room = (typeof window.WebsimSocket !== 'undefined') 
+    ? new window.WebsimSocket() 
+    : {
+        collection: () => ({
+            filter: () => ({
+                getList: async () => [],
+                create: async () => {},
+                update: async () => {}
+            })
+        })
+    };
 
 // Game constants
 export const LEVELS = [
@@ -64,8 +75,18 @@ export const useGameStore = create((set, get) => ({
     
     // Actions
     init: async () => {
-        // Load from Websim DB
-        const user = await window.websim.getCurrentUser();
+        // Load from Websim DB or mock guest
+        let user;
+        try {
+            if (window.websim && window.websim.getCurrentUser) {
+                user = await window.websim.getCurrentUser();
+            } else {
+                user = { username: "Guest_Creator", id: "guest" };
+            }
+        } catch (e) {
+            console.warn("User load failed, defaulting to guest");
+            user = { username: "Guest_Creator", id: "guest" };
+        }
         
         let savedData = null;
         try {
