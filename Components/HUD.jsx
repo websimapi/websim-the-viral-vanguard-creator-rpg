@@ -143,9 +143,26 @@ const HUD = () => {
       lineNumber: 64,
       columnNumber: 13
     }),
-    /* @__PURE__ */ jsxDEV("div", { style: { textAlign: "center", color: "rgba(255,255,255,0.5)", paddingBottom: "20px" }, children: "WASD to Move \u2022 Mouse to Look \u2022 E to Interact" }, void 0, false, {
+    /* @__PURE__ */ jsxDEV("div", { style: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      width: "4px",
+      height: "4px",
+      background: "white",
+      borderRadius: "50%",
+      transform: "translate(-50%, -50%)",
+      boxShadow: "0 0 4px white",
+      opacity: 0.7,
+      pointerEvents: "none"
+    } }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 90,
+      columnNumber: 13
+    }),
+    /* @__PURE__ */ jsxDEV("div", { style: { textAlign: "center", color: "rgba(255,255,255,0.5)", paddingBottom: "20px" }, children: "WASD to Move \u2022 Mouse to Look \u2022 E to Interact" }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 97,
       columnNumber: 13
     })
   ] }, void 0, true, {
@@ -203,29 +220,29 @@ const QuestModal = () => {
         /* @__PURE__ */ jsxDEV("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #333", paddingBottom: "10px" }, children: [
           /* @__PURE__ */ jsxDEV("h2", { style: { margin: 0, color: "#00d4ff" }, children: stationTitles[activeStation] }, void 0, false, {
             fileName: "<stdin>",
-            lineNumber: 144,
+            lineNumber: 151,
             columnNumber: 21
           }),
           /* @__PURE__ */ jsxDEV("button", { onClick: closeModal, style: { background: "none", border: "none", color: "#666", fontSize: "24px", cursor: "pointer" }, children: "\xD7" }, void 0, false, {
             fileName: "<stdin>",
-            lineNumber: 145,
+            lineNumber: 152,
             columnNumber: 21
           })
         ] }, void 0, true, {
           fileName: "<stdin>",
-          lineNumber: 143,
+          lineNumber: 150,
           columnNumber: 17
         }),
         /* @__PURE__ */ jsxDEV("div", { children: [
           /* @__PURE__ */ jsxDEV("h3", { style: { fontSize: "14px", color: "#888", textTransform: "uppercase" }, children: "Active Quests Here" }, void 0, false, {
             fileName: "<stdin>",
-            lineNumber: 149,
+            lineNumber: 156,
             columnNumber: 21
           }),
           /* @__PURE__ */ jsxDEV("div", { style: { display: "flex", flexDirection: "column", gap: "10px", marginTop: "10px" }, children: [
             availableQuests.length === 0 && /* @__PURE__ */ jsxDEV("div", { style: { color: "#666", fontStyle: "italic" }, children: "No active quests for this station. Create one below!" }, void 0, false, {
               fileName: "<stdin>",
-              lineNumber: 151,
+              lineNumber: 158,
               columnNumber: 58
             }),
             availableQuests.map((q) => /* @__PURE__ */ jsxDEV("div", { style: {
@@ -240,12 +257,12 @@ const QuestModal = () => {
               /* @__PURE__ */ jsxDEV("div", { children: [
                 /* @__PURE__ */ jsxDEV("div", { style: { fontWeight: "bold", fontSize: "18px" }, children: q.title }, void 0, false, {
                   fileName: "<stdin>",
-                  lineNumber: 164,
+                  lineNumber: 171,
                   columnNumber: 37
                 }),
                 /* @__PURE__ */ jsxDEV("div", { style: { fontSize: "14px", color: "#aaa" }, children: q.description }, void 0, false, {
                   fileName: "<stdin>",
-                  lineNumber: 165,
+                  lineNumber: 172,
                   columnNumber: 37
                 }),
                 /* @__PURE__ */ jsxDEV("div", { style: { fontSize: "12px", color: "#4d4dff", marginTop: "5px" }, children: [
@@ -256,12 +273,12 @@ const QuestModal = () => {
                   " Gold"
                 ] }, void 0, true, {
                   fileName: "<stdin>",
-                  lineNumber: 166,
+                  lineNumber: 173,
                   columnNumber: 37
                 })
               ] }, void 0, true, {
                 fileName: "<stdin>",
-                lineNumber: 163,
+                lineNumber: 170,
                 columnNumber: 33
               }),
               /* @__PURE__ */ jsxDEV(
@@ -284,29 +301,29 @@ const QuestModal = () => {
                 false,
                 {
                   fileName: "<stdin>",
-                  lineNumber: 168,
+                  lineNumber: 175,
                   columnNumber: 33
                 }
               )
             ] }, q.id, true, {
               fileName: "<stdin>",
-              lineNumber: 154,
+              lineNumber: 161,
               columnNumber: 29
             }))
           ] }, void 0, true, {
             fileName: "<stdin>",
-            lineNumber: 150,
+            lineNumber: 157,
             columnNumber: 21
           })
         ] }, void 0, true, {
           fileName: "<stdin>",
-          lineNumber: 148,
+          lineNumber: 155,
           columnNumber: 17
         }),
         /* @__PURE__ */ jsxDEV("div", { style: { borderTop: "1px solid #333", paddingTop: "20px" }, children: [
           /* @__PURE__ */ jsxDEV("h3", { style: { fontSize: "14px", color: "#888", textTransform: "uppercase" }, children: "Assign New Task" }, void 0, false, {
             fileName: "<stdin>",
-            lineNumber: 189,
+            lineNumber: 196,
             columnNumber: 21
           }),
           /* @__PURE__ */ jsxDEV("form", { onSubmit: handleCreate, style: { display: "flex", gap: "10px" }, children: [
@@ -332,7 +349,7 @@ const QuestModal = () => {
               false,
               {
                 fileName: "<stdin>",
-                lineNumber: 191,
+                lineNumber: 198,
                 columnNumber: 25
               }
             ),
@@ -346,17 +363,17 @@ const QuestModal = () => {
               fontWeight: "bold"
             }, children: "ADD" }, void 0, false, {
               fileName: "<stdin>",
-              lineNumber: 207,
+              lineNumber: 214,
               columnNumber: 25
             })
           ] }, void 0, true, {
             fileName: "<stdin>",
-            lineNumber: 190,
+            lineNumber: 197,
             columnNumber: 21
           })
         ] }, void 0, true, {
           fileName: "<stdin>",
-          lineNumber: 188,
+          lineNumber: 195,
           columnNumber: 17
         })
       ]
@@ -365,12 +382,12 @@ const QuestModal = () => {
     true,
     {
       fileName: "<stdin>",
-      lineNumber: 126,
+      lineNumber: 133,
       columnNumber: 13
     }
   ) }, void 0, false, {
     fileName: "<stdin>",
-    lineNumber: 120,
+    lineNumber: 127,
     columnNumber: 9
   });
 };
